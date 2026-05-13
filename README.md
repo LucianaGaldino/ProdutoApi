@@ -66,8 +66,8 @@ ProdutoAPI/
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/produto-api.git
-cd produto-api
+git clone https://github.com/LucianaGaldino/ProdutoApi.git
+cd     ProdutoApi
 ```
 
 ### 2. Configure o banco de dados
