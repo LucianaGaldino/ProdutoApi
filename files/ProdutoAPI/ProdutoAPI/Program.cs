@@ -34,15 +34,12 @@ builder.Services.AddScoped<ProdutoService>();
 var app = builder.Build();
 
 // ── Middleware ────────────────────────────────────────────
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(options =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(options =>
-    {
-        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Produto API v1");
-        options.RoutePrefix = "swagger"; // Swagger em "/swagger"
-    });
-}
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "Produto API v1");
+    options.RoutePrefix = "swagger"; // Swagger em "/swagger"
+});
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
